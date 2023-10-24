@@ -14,6 +14,8 @@ export default ({ mode }) => {
         resolve: {
             alias: {
                 src: `${__dirname}/src`,
+                '@routes': `${__dirname}/src/routes`,
+                '@views': `${__dirname}/src/views`,
             },
         },
     });

@@ -16,7 +16,11 @@
         "noEmit": true,
         "jsx": "react-jsx",
         "baseUrl": "./",
-        "allowImportingTsExtensions": true
+        "allowImportingTsExtensions": true,
+        "paths": {
+            "@views/*": ["./src/views/*"],
+            "@routes/*": ["./src/routes/*"]
+        }
     },
     "include": ["src"],
     "references": [{ "path": "./tsconfig.node.json" }]
