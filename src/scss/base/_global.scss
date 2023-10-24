@@ -1,0 +1,26 @@
+:root {
+    min-width: 320px;
+    font-family: 'roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 62.5%;
+    // color-scheme: light dark;
+    color: $defaultColor;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation !important;
+}
+
+#root {
+    height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+}

@@ -1,0 +1,52 @@
+$breakpoints: (
+    mobile: (
+        min: 768px,
+        max: 767.98px,
+    ),
+    tablet: (
+        min: 992px,
+        max: 991.98px,
+    ),
+    desktop: (
+        min: 1200px,
+        max: 1199.98px,
+    ),
+    large: (
+        min: 1400px,
+        max: 1399.98px,
+    ),
+);
+
+@mixin responsive($breakpoint, $direction: max) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-values: map-get($breakpoints, $breakpoint);
+        $breakpoint-min: map-get($breakpoint-values, min);
+        $breakpoint-max: map-get($breakpoint-values, max);
+
+        @if $direction == min {
+            @media (min-width: $breakpoint-min) {
+                @content;
+            }
+        } @else {
+            @media (max-width: $breakpoint-max) {
+                @content;
+            }
+        }
+    } @else {
+        @if $direction == min {
+            @media (min-width: '#{$breakpoint}px') {
+                @content;
+            }
+        } @else {
+            @media (max-width: '#{$breakpoint}px') {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin responsive-range($min, $max) {
+    @media (min-width: '#{$min}px') and (max-width: '#{$max}px') {
+        @content;
+    }
+}
