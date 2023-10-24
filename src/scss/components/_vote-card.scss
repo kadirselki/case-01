@@ -6,6 +6,18 @@
     border-radius: 2rem;
     background: #fff;
     box-shadow: 0.1rem 0.1rem 0 0.1rem #ffd973;
+    position: relative;
+
+    @include responsive(mobile) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 9rem;
+
+        > * {
+            width: 100%;
+        }
+    }
 
     .employee-image {
         width: 12rem;
@@ -14,6 +26,18 @@
         overflow: hidden;
         flex: 0 0 auto;
         border: 0.2rem solid #f1f1f1;
+
+        @include responsive(mobile) {
+            width: 13rem;
+            height: 13rem;
+            position: absolute;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            left: 50%;
+            box-shadow: 0.1rem 0.1rem 0 0.1rem #ffd973;
+            border: 0.1rem solid #000;
+        }
     }
 
     .vote-card-content {
@@ -22,6 +46,7 @@
         justify-content: space-between;
         max-height: 11rem;
         flex: 1 1 auto;
+        padding-top: 3rem;
 
         &-header {
             display: flex;
@@ -70,6 +95,7 @@
         flex-direction: column;
         justify-content: center;
         transition: all 0.3s ease;
+        position: relative;
 
         &:hover {
             background: #ffe19f;
@@ -77,6 +103,22 @@
 
         &-count {
             margin-top: 0.6rem;
+            @include responsive(mobile) {
+                margin: 0 0 0 0.6rem;
+                position: absolute;
+                right: 1.4rem;
+                bottom: 0.6rem;
+            }
+        }
+
+        @include responsive(mobile) {
+            flex-direction: row;
+            height: 5rem;
+
+            svg {
+                width: 2.8rem;
+                height: 2.8rem;
+            }
         }
     }
 }

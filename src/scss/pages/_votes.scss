@@ -8,6 +8,11 @@
         flex-direction: column;
         grid-gap: 2rem;
 
+        @include responsive(mobile) {
+            width: 100%;
+            padding: 0.2rem;
+        }
+
         &:after,
         &:before {
             content: '';
