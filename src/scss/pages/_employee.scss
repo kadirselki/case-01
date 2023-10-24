@@ -1,0 +1,90 @@
+.employee-detail {
+    .employee-header {
+        .employee-name {
+            font-size: 3.8rem;
+        }
+        .employee-title {
+            font-size: 2.2rem;
+            font-weight: 300;
+        }
+    }
+
+    .employee-content {
+        display: flex;
+        margin-top: 2rem;
+        grid-gap: 2rem;
+
+        .employee-image {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 2rem;
+            display: flex;
+            border: 0.2rem solid #cac6c6;
+            box-shadow: 0.2rem 0.1rem 0 0.1rem #ffd973;
+
+            img {
+                max-width: 30rem;
+                border-radius: 1.4rem;
+            }
+        }
+
+        .employee-informations {
+            flex: 1 1 auto;
+            background: #fff;
+            padding: 3rem;
+            border-radius: 2rem;
+            display: flex;
+            align-items: flex-start;
+
+            .employee-information-list {
+                display: grid;
+                grid-gap: 0.6rem;
+                flex: 1 1 auto;
+                p,
+                a {
+                    display: flex;
+                    grid-gap: 1rem;
+                    .employee-information-list-title {
+                        font-size: 2rem;
+                        font-weight: 500;
+                        flex: 0 0 auto;
+                    }
+
+                    .employee-information-list-content {
+                        font-size: 2.2rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            .employee-detail-vote-stats {
+                background: #f8f8f8;
+                border: 0.2rem solid #000;
+                box-shadow: 0.2rem 0.1rem 0 0.1rem #ffd973;
+                width: 20rem;
+                height: 20rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 2rem;
+
+                .vote-stat-perctange {
+                    line-height: 1.3;
+                    font-size: 4.2rem;
+                    font-weight: 500;
+
+                    .weak-text {
+                        font-size: 2.4rem;
+                        margin-right: 0.4rem;
+                    }
+                }
+
+                .vote-stat-count {
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
