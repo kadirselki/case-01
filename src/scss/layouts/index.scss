@@ -1,1 +1,17 @@
 //Import layouts
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem 2rem 1rem 2rem;
+
+    .container {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 140rem;
+        flex: 1 1 auto;
+        overflow: auto;
+        margin: 2rem auto 1rem auto;
+    }
+}

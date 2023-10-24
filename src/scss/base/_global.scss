@@ -5,17 +5,20 @@
     font-weight: 400;
     font-size: 62.5%;
     // color-scheme: light dark;
-    color: $defaultColor;
+    color: $textColor;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     touch-action: manipulation !important;
+    padding: 2rem;
 }
 
 #root {
+    background: #fff7e5;
     height: 100%;
+    border-radius: 2rem;
 }
 
 html,

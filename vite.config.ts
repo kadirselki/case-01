@@ -16,6 +16,7 @@ export default ({ mode }) => {
                 src: `${__dirname}/src`,
                 '@routes': `${__dirname}/src/routes`,
                 '@views': `${__dirname}/src/views`,
+                '@components': `${__dirname}/src/components`,
             },
         },
     });
