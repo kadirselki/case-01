@@ -5,7 +5,7 @@ export const Header = () => {
         <header className="app-header">
             <Link to="/" className="app-logo">
                 <figure>
-                    <img src="/public/images/logo.png" alt="Logo" width="60" height="60" />
+                    <img src="/images/logo.png" alt="Logo" width="60" height="60" />
                 </figure>
                 <span className="app-logo-text">
                     Star Employee
