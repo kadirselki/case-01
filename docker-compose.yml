@@ -1,4 +1,4 @@
-version: '0.01'
+version: '3.8'
 
 services:
     graphql-faker:
@@ -8,3 +8,10 @@ services:
         volumes:
             - ./api-scheme.sdl:/api-scheme.sdl
         command: /api-scheme.sdl
+
+    react-app:
+        build: .
+        ports:
+            - '3000:80'
+        depends_on:
+            - graphql-faker
