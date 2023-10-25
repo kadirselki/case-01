@@ -11,6 +11,7 @@ import { RootState } from 'src/store';
 import classNames from 'classnames';
 import { setTotalVotes } from 'src/store/slices/app.slice';
 import { addLog } from 'src/store/slices/logs.slice';
+import useMediaQuery from 'src/hooks/useMediaQuery';
 
 export const VoteCard = ({ data }: IVoteCardProps) => {
     const dispatch = useDispatch();
@@ -18,6 +19,7 @@ export const VoteCard = ({ data }: IVoteCardProps) => {
     const launchConfetti = useConfetti();
     const linkRef = useRef<HTMLAnchorElement>(null);
     const [clicked, setClicked] = useState(false);
+    const isMobile = useMediaQuery('(max-width: 767px)');
     const { name, surname, title, votes, photo, id } = data;
 
     const handleVote = () => {
@@ -58,11 +60,16 @@ export const VoteCard = ({ data }: IVoteCardProps) => {
                 })}
                 onClick={() => handleVote()}
             >
-                <i>
-                    <IconVote width={40} height={40} />
-                </i>
+                {isMobile ? (
+                    <span className="vote-button-text">VOTE</span>
+                ) : (
+                    <i>
+                        <IconVote width={40} height={40} />
+                    </i>
+                )}
+
                 <span className="vote-button-count">
-                    <b>{votes}</b> vote
+                    <b>{votes}</b> vote(s)
                 </span>
             </button>
         </Link>
