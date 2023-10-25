@@ -6,7 +6,7 @@ Uygulamanın geliştirme süreci yaklaşık olarak bir buçuk gün aldı. Bu sü
 
 ### Live: http://case-01.selkii.net
 
-<img src="https://raw.githubusercontent.com/kadirselki/case-01/master/public/images/web2.gif" height="516">
+<img src="https://raw.githubusercontent.com/kadirselki/case-01/master/public/images/web2.gif" height="516" style="object-fit: contain">
 <img src="https://raw.githubusercontent.com/kadirselki/case-01/master/public/images/mobile2.gif" width="250">
 
 ### Localde çalıştırmak için aşağıdaki adımları takip edin:
@@ -46,7 +46,7 @@ Bu işlemler sonrasında uygulama http://localhost:3000 adresinde çalışmaya b
 
 ### Design
 
-SCSS'de 6-1 pattern (abstracts, base, components, layout, pages, vendors) kullandım. Tasarım aşamasında, hayal gücümle oluşturduğum stilleri CSS'e dökerek oluşturdum. Bu süreçte tasarım üzerinde sık sık değişiklikler yapmam gerektiği için, tipografi ve design pattern oluşturmak pek mümkün olmadı. Uygulamayı tamamladıktan sonra bunu yapmak da bir anlam ifade etmezdi.
+SCSS'deki 6-1 pattern (abstracts, base, components, layout, pages, vendors) kullanarak, tasarım sürecimi yaratıcı ve dinamik bir şekilde yürüttüm. Stil ve tasarım değişikliklerine kolay uyum sağlamak için, tipografi ve design pattern kalıplarından ziyade, doğaçlama ve anlık çözümlere odaklandım. Bu yaklaşım, uygulamanın gelişim sürecini esnek ve yenilikçi kıldı.
 
 ### Development
 
