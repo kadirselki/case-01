@@ -2,7 +2,7 @@
 
 20 kişilik bir şirket çalışanları grubundan, ayın yıldız çalışanını seçmek üzere geliştirilmiş bir oylama uygulamasıdır. Uygulama içerisinde istediğiniz kişiye sınırsız oy verebilir, kişilerin bilgilerini görüntüleyebilir ve yapılan oylama ve profil görüntüleme olaylarını takip edebilirsiniz.
 
-Uygulamanın geliştirme süreci yaklaşık olarak bir buçuk gün aldı. Bu sürenin büyük bir kısmını, özellikle tasarım aşamasına ayırdım. Minimalist, kullanıcı dostu ve canlı bir uygulama olsun istedim. Tasarımı hayal ederken ve hayata geçirirken, Superpeer'in (https://superpeer.com) renk paleti ve tasarım anlayışından esinlendim.
+Uygulamanın geliştirme süreci yaklaşık olarak bir buçuk gün aldı. Bu sürenin büyük bir kısmını, özellikle tasarım aşamasına ayırdım. Minimalist, kullanıcı dostu ve canlı bir uygulama olsun istedim. Tasarımı hayal ederken ve hayata geçirirken, Superpeer'in renk paleti ve tasarım anlayışından esinlendim.
 
 ### Live: http://case-01.selkii.net
 
@@ -13,7 +13,7 @@ Uygulamanın geliştirme süreci yaklaşık olarak bir buçuk gün aldı. Bu sü
 
 1 - `git clone https://github.com/kadirselki/case-01.git`
 
-2 - `.env dosyasını oluşturun ve içerisine aşağıdaki değişkenkeri ekleyin`
+2 - `.env` dosyasını oluşturun ve içerisine aşağıdaki değişkenkeri ekleyin
 
     PORT = 3009
     GRAPHQL_SERVER = "http://localhost:9002/graphql"
