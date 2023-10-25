@@ -26,9 +26,9 @@ Bu işlemler sonrasında uygulama http://localhost:3000 adresinde çalışmaya b
 
 #### Ayrı bir şekilde uygulamaları ayağa kaldırmak için;
 
-3 - `npm run dev` (react app) - http://localhost:3009
+3 - `docker-compose up graphql-faker` (GraphQL-faker) - http://localhost:9002
 
-4 - `docker-compose up graphql-faker` (GraphQL-faker) - http://localhost:9002
+4 - GraphQL ayağa kalktıktan sonra `npm run dev` (react app) - http://localhost:3009
 
 ## Kullanılan teknolojiler
 
@@ -39,7 +39,7 @@ Bu işlemler sonrasında uygulama http://localhost:3000 adresinde çalışmaya b
 -   Typescript
 -   Scss
 -   Apollo
--   Graphql
+-   GraphQL
 -   Docker
 
 ## Geliştirici notları
