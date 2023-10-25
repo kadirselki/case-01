@@ -6,7 +6,7 @@ Uygulamanın geliştirme süreci yaklaşık olarak bir buçuk gün aldı. Bu sü
 
 ### Live: http://case-01.selkii.net
 
-<img src="https://raw.githubusercontent.com/kadirselki/case-01/master/public/images/web.gif" height="516">
+<img src="https://raw.githubusercontent.com/kadirselki/case-01/master/public/images/web2.gif" height="516">
 <img src="https://raw.githubusercontent.com/kadirselki/case-01/master/public/images/mobile.gif" width="250">
 
 ### Localde çalıştırmak için aşağıdaki adımları takip edin:
