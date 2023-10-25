@@ -1,6 +1,6 @@
 import EmployeePage from '@views/employee';
 import ErrorPage from '@views/error';
-import Logs from '@views/logs';
+import Logs from '@views/logs-page';
 import VotesPage from '@views/votes';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
