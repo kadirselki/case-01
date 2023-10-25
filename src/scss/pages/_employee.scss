@@ -1,6 +1,10 @@
 .employee-detail {
     margin: -4rem 0 -4rem 0;
 
+    @include responsive(mobile) {
+        margin: 0;
+    }
+
     .employee-header {
         .employee-name {
             font-size: 3.8rem;

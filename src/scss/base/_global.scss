@@ -48,10 +48,6 @@ body {
     &:hover {
         transform: translateX(-0.3rem);
     }
-
-    @include responsive(mobile) {
-        margin-top: 4rem;
-    }
 }
 
 .loader-container {
