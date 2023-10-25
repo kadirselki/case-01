@@ -50,7 +50,7 @@ SCSS'de 6-1 pattern (abstracts, base, components, layout, pages, vendors) kullan
 
 ### Development
 
-ygulamanın kod kalitesini ve sürdürülebilirliğini artırmak amacıyla Typescript, Eslint ve Prettier gibi araçlardan faydalandım. Mimariyi mümkün olduğunca bileşen tabanlı (component-based) tutarak, uygulama içindeki bağımlılıkları minimize etmeyi amaçladım. Ayrıca, GraphQL-faker'deki @fake ile oluşturulan görsel verilerin yanlış ve hatalı URL'ler içermesi nedeniyle, kullanıcı görsellerini "api-scheme.sdl" dosyası içerisine kendim ekledim.
+Uygulamanın kod kalitesini ve sürdürülebilirliğini artırmak amacıyla Typescript, Eslint ve Prettier gibi araçlardan faydalandım. Mimariyi mümkün olduğunca bileşen tabanlı (component-based) tutarak, uygulama içindeki bağımlılıkları minimize etmeyi amaçladım. Ayrıca, GraphQL-faker'deki @fake ile oluşturulan görsel verilerin yanlış ve hatalı URL'ler içermesi nedeniyle, kullanıcı görsellerini "api-scheme.sdl" dosyası içerisine kendim ekledim.
 
 ### State Management
 
