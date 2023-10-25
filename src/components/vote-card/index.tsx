@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setVotes } from 'src/store/slices/employees.slice';
 import { RootState } from 'src/store';
 import classNames from 'classnames';
+import { setTotalVotes } from 'src/store/slices/app.slice';
+import { setLogs } from 'src/store/slices/logs.slice';
 
 export const VoteCard = ({ data }: IVoteCardProps) => {
     const dispatch = useDispatch();
@@ -21,9 +23,10 @@ export const VoteCard = ({ data }: IVoteCardProps) => {
     const handleVote = () => {
         setClicked(true);
         setTimeout(() => setClicked(false), 80);
-        const count = votes + 1;
-        dispatch(setVotes({ id, votes: count }));
         launchConfetti();
+        dispatch(setVotes({ id, votes: votes + 1 }));
+        dispatch(setTotalVotes(totalVotes + 1));
+        dispatch(setLogs({ id, type: 'VOTE', message: `${name} ${surname} voted!` }));
     };
 
     return (

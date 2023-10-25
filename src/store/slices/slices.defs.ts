@@ -24,7 +24,8 @@ export interface IEmployee {
 
 export interface ILog {
     type: 'VİEW_PROFILE' | 'VOTE';
-    employeeId: string;
+    id: string;
+    message: string;
     date: string;
 }
 

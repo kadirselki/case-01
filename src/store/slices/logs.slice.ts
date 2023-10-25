@@ -10,9 +10,12 @@ export const logsSlice = createSlice({
     name: 'logs',
     initialState,
     reducers: {
-        setLogs: (state, { payload }: PayloadAction<{ type: 'VİEW_PROFILE' | 'VOTE'; employeeId: string }>) => {
-            const { type, employeeId } = payload;
-            const log = { type, employeeId, date: new Date().toISOString() };
+        setLogs: (
+            state,
+            { payload }: PayloadAction<{ type: 'VİEW_PROFILE' | 'VOTE'; id: string; message: string }>,
+        ) => {
+            const { type, id, message } = payload;
+            const log = { id, type, message, date: new Date().toISOString() };
             state.logs.push(log);
         },
     },

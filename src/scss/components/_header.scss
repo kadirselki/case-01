@@ -1,6 +1,8 @@
 .app-header {
     height: 8rem;
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
     background: #fff;
@@ -16,6 +18,13 @@
             .weak-text {
                 font-weight: 300;
             }
+        }
+    }
+
+    &-infos {
+        .total-votes {
+            font-weight: 300;
+            font-size: 2rem;
         }
     }
 }
