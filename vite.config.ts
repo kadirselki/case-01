@@ -11,6 +11,9 @@ export default ({ mode }) => {
             open: true,
             host: '0.0.0.0',
         },
+        define: {
+            'process.env': process.env,
+        },
         resolve: {
             alias: {
                 src: `${__dirname}/src`,
