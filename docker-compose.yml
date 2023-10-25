@@ -1,0 +1,10 @@
+version: '0.01'
+
+services:
+    graphql-faker:
+        image: apisguru/graphql-faker
+        ports:
+            - '9002:9002'
+        volumes:
+            - ./api-scheme.sdl:/api-scheme.sdl
+        command: /api-scheme.sdl
