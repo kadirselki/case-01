@@ -62,7 +62,7 @@ Redux-toolkit kullanarak üç farklı slice geliştirdim:
 
 ### Deployment
 
-GraphQL-faker ve react uygulamamı dockerize edip, Digital Ocean'da bir dropletde yükledim. Dns ve nginx ayarlarını yapıp, Docker ile ayağa kaldırdım.
+GraphQL-faker ve react uygulamamı dockerize edip, Digital Ocean'da bir droplete yükledim. Dns ve nginx ayarlarını yapıp, Docker ile ayağa kaldırdım.
 
 ### Notes
 
