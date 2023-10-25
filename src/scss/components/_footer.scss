@@ -11,7 +11,17 @@
     background: #feeecb;
     border-radius: 0.6rem;
 
+    &:hover {
+        box-shadow: 0 0 0 0.2rem #000;
+    }
+
     @include responsive(mobile) {
+        width: calc(100% - 4rem);
+        position: fixed;
+        bottom: 1rem;
         margin: 1rem auto;
+        z-index: 3;
+        background: #f8f8f8;
+        border: 0.1rem solid #000;
     }
 }

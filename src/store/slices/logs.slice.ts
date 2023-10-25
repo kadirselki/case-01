@@ -3,22 +3,22 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { ILogState } from './slices.defs';
 
 export const initialState: ILogState = {
-    logs: [],
+    list: [],
 };
 
 export const logsSlice = createSlice({
     name: 'logs',
     initialState,
     reducers: {
-        setLogs: (
+        addLog: (
             state,
-            { payload }: PayloadAction<{ type: 'VİEW_PROFILE' | 'VOTE'; id: string; message: string }>,
+            { payload }: PayloadAction<{ type: 'VİEW_PROFILE' | 'VOTE'; employeeId: string; message: string }>,
         ) => {
-            const { type, id, message } = payload;
-            const log = { id, type, message, date: new Date().toISOString() };
-            state.logs.push(log);
+            const { type, employeeId, message } = payload;
+            const log = { employeeId, type, message, date: new Date().toISOString() };
+            state.list.push(log);
         },
     },
 });
 
-export const { setLogs } = logsSlice.actions;
+export const { addLog } = logsSlice.actions;

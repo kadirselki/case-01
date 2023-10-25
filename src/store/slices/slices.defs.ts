@@ -24,11 +24,11 @@ export interface IEmployee {
 
 export interface ILog {
     type: 'VİEW_PROFILE' | 'VOTE';
-    id: string;
+    employeeId: string;
     message: string;
     date: string;
 }
 
 export interface ILogState {
-    logs: ILog[];
+    list: ILog[];
 }

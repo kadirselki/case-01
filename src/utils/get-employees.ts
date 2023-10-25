@@ -21,5 +21,6 @@ const QUERY = gql`
 export const getEmployees = () => {
     const { data, loading, error } = useQuery(QUERY);
     const employees = data?.employees || null;
+    if (error) console.log(error);
     return { employees, loading, error };
 };

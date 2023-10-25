@@ -1,0 +1,18 @@
+.log-item {
+    background: #fff;
+    box-shadow: 0.1rem 0.1rem 0 0.1rem #ffd973;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 2rem;
+    flex-wrap: wrap;
+
+    .message {
+        font-size: 1.8rem;
+    }
+
+    .time {
+        align-self: flex-start;
+    }
+}

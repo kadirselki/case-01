@@ -10,7 +10,7 @@ import { setVotes } from 'src/store/slices/employees.slice';
 import { RootState } from 'src/store';
 import classNames from 'classnames';
 import { setTotalVotes } from 'src/store/slices/app.slice';
-import { setLogs } from 'src/store/slices/logs.slice';
+import { addLog } from 'src/store/slices/logs.slice';
 
 export const VoteCard = ({ data }: IVoteCardProps) => {
     const dispatch = useDispatch();
@@ -26,7 +26,7 @@ export const VoteCard = ({ data }: IVoteCardProps) => {
         launchConfetti();
         dispatch(setVotes({ id, votes: votes + 1 }));
         dispatch(setTotalVotes(totalVotes + 1));
-        dispatch(setLogs({ id, type: 'VOTE', message: `${name} ${surname} voted!` }));
+        dispatch(addLog({ employeeId: id, type: 'VOTE', message: `${name} ${surname} voted!` }));
     };
 
     return (

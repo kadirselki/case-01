@@ -1,12 +1,15 @@
+import { NotFoundBox } from '@components/not-found-box';
 import { Layout } from '@views/layout';
-import { useLayoutEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect, useLayoutEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useNavigate, useParams } from 'react-router-dom';
 import { IconBack } from 'src/icons/svg-icons';
 import { RootState } from 'src/store';
+import { addLog } from 'src/store/slices/logs.slice';
 
 const EmployeePage = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const { id } = useParams();
 
@@ -17,10 +20,31 @@ const EmployeePage = () => {
     const data = useSelector((state: RootState) => state.employees.list?.find((emp) => emp.id === id));
 
     if (!data) {
-        navigate('/');
-        return;
+        return (
+            <Layout>
+                <div className="employee-detail smooth-overflow">
+                    <Link to="/" className="prev-page-btn">
+                        <i>
+                            <IconBack width={30} height={20} />
+                        </i>
+                        Back
+                    </Link>
+                    <NotFoundBox message="Employee not found!" />
+                </div>
+            </Layout>
+        );
     }
     const { name, surname, title, photo, age, phone, email, address, bio } = data;
+
+    useEffect(() => {
+        dispatch(
+            addLog({
+                employeeId: id as string,
+                type: 'VİEW_PROFILE',
+                message: `${name} ${surname} profile viewed!`,
+            }),
+        );
+    }, []);
 
     const totalVotes = useSelector((state: RootState) => state.app.totalVotes);
     const currentStats = {

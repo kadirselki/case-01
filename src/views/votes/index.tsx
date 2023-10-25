@@ -1,6 +1,6 @@
+import { NotFoundBox } from '@components/not-found-box';
 import { VoteCard } from '@components/vote-card';
 import { Layout } from '@views/layout';
-import { Fragment } from 'react';
 import { Flipped, Flipper } from 'react-flip-toolkit';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/store';
@@ -31,7 +31,9 @@ const VotesPage = () => {
                         ))}
                     </Flipper>
                 ) : (
-                    'Employee list is empty!'
+                    <div className="vote-list smooth-overflow">
+                        <NotFoundBox message="Employee list is empty!" />
+                    </div>
                 )}
             </div>
         </Layout>
