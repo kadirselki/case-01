@@ -1,15 +1,30 @@
 import { CustomProgress } from '@components/custom-progress';
 import { IconVote } from 'src/icons/svg-icons';
 import { useConfetti } from 'src/hooks/useConfetti';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { avoidLinkOnClick } from 'src/helpers/avoid-link-on-click';
 import { IVoteCardProps } from './vote-card.defs';
+import { useDispatch, useSelector } from 'react-redux';
+import { setVotes } from 'src/store/slices/employees.slice';
+import { RootState } from 'src/store';
+import classNames from 'classnames';
 
 export const VoteCard = ({ data }: IVoteCardProps) => {
+    const dispatch = useDispatch();
+    const totalVotes = useSelector((state: RootState) => state.app.totalVotes);
     const launchConfetti = useConfetti();
     const linkRef = useRef<HTMLAnchorElement>(null);
-    const { name, surname, title, votes, photo } = data;
+    const [clicked, setClicked] = useState(false);
+    const { name, surname, title, votes, photo, id } = data;
+
+    const handleVote = () => {
+        setClicked(true);
+        setTimeout(() => setClicked(false), 80);
+        const count = votes + 1;
+        dispatch(setVotes({ id, votes: count }));
+        launchConfetti();
+    };
 
     return (
         <Link
@@ -31,14 +46,21 @@ export const VoteCard = ({ data }: IVoteCardProps) => {
                     </div>
                 </header>
                 <div className="progress-wrapper">
-                    <CustomProgress value={10} max={100} />
+                    <CustomProgress value={votes} max={totalVotes} />
                 </div>
             </div>
-            <button className="vote-button" onClick={launchConfetti}>
+            <button
+                className={classNames('vote-button', {
+                    clicked,
+                })}
+                onClick={() => handleVote()}
+            >
                 <i>
                     <IconVote width={40} height={40} />
                 </i>
-                <span className="vote-button-count">{votes} vote</span>
+                <span className="vote-button-count">
+                    <b>{votes}</b> vote
+                </span>
             </button>
         </Link>
     );

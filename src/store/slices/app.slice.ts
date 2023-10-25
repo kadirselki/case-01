@@ -5,6 +5,7 @@ import { IAppState } from './slices.defs';
 export const initialState: IAppState = {
     appLoading: true,
     appError: false,
+    totalVotes: 0,
 };
 
 export const appSlice = createSlice({
@@ -18,7 +19,10 @@ export const appSlice = createSlice({
             state.appLoading = false;
             state.appError = payload;
         },
+        setTotalVotes: (state, { payload }: PayloadAction<number>) => {
+            state.totalVotes = payload;
+        },
     },
 });
 
-export const { setLoading, setError } = appSlice.actions;
+export const { setLoading, setError, setTotalVotes } = appSlice.actions;

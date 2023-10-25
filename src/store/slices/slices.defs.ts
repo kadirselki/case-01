@@ -1,6 +1,7 @@
 export interface IAppState {
     appLoading: boolean;
     appError: boolean;
+    totalVotes: number;
 }
 
 export interface IEmployeeState {

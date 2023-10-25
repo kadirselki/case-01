@@ -53,5 +53,5 @@ type Employee {
     age: Int! @fake(type: number, options: { maxNumber: 29, minNumber: 18 })
     email: String! @fake(type: email)
     bio: String @fake(type: lorem, options: { loremSize: paragraph })
-    votes: Int! @fake(type: number, options: { maxNumber: 55, minNumber: 0 })
+    votes: Int! @fake(type: number, options: { maxNumber: 12, minNumber: 0 })
 }

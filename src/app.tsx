@@ -1,12 +1,11 @@
 import { Routes } from '@routes/app.router';
-import { Fragment, Suspense, useLayoutEffect } from 'react';
+import { Suspense, useLayoutEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getEmployees } from './utils/get-employees';
 import { RootState } from './store';
-
 import { setEmployees } from './store/slices/employees.slice';
 import { IEmployee } from './store/slices/slices.defs';
-import { setError, setLoading } from './store/slices/app.slice';
+import { setError, setLoading, setTotalVotes } from './store/slices/app.slice';
 
 export const App = () => {
     const dispatch = useDispatch();
@@ -21,6 +20,8 @@ export const App = () => {
         if (employees) {
             dispatch(setLoading(false));
             dispatch(setEmployees(employees as IEmployee[]));
+            const totalVotes = employees.reduce((total: number, emp: IEmployee) => total + (emp.votes || 0), 0);
+            dispatch(setTotalVotes(totalVotes));
         }
     }, [apiLoading, error, employees]);
 
