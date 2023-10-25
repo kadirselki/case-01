@@ -3,7 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { IEmployeeState } from './slices.defs';
 
 export const initialState: IEmployeeState = {
-    employees: null,
+    list: null,
 };
 
 export const employeesSlice = createSlice({
@@ -12,12 +12,15 @@ export const employeesSlice = createSlice({
     reducers: {
         setVotes: (state, { payload }: PayloadAction<{ id: string; votes: number }>) => {
             const { id, votes } = payload;
-            const employee = state.employees?.find((employee) => employee.id === id);
+            const employee = state.list?.find((employee) => employee.id === id);
             if (employee) {
                 employee.votes = votes;
             }
         },
+        setEmployees: (state, { payload }: PayloadAction<IEmployeeState['list']>) => {
+            state.list = payload;
+        },
     },
 });
 
-export const { setVotes } = employeesSlice.actions;
+export const { setVotes, setEmployees } = employeesSlice.actions;
