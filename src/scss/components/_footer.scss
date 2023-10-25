@@ -18,7 +18,9 @@
     @include responsive(mobile) {
         width: calc(100% - 4rem);
         position: fixed;
-        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0rem;
         margin: 1rem auto;
         z-index: 3;
         background: #f8f8f8;

@@ -5,7 +5,7 @@
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
-    grid-gap: 2rem;
+    grid-gap: 1rem 2rem;
     flex-wrap: wrap;
 
     .message {
@@ -13,6 +13,7 @@
     }
 
     .time {
+        color: #999;
         align-self: flex-start;
     }
 }

@@ -6,6 +6,7 @@ import { RootState } from './store';
 import { setEmployees } from './store/slices/employees.slice';
 import { IEmployee } from './store/slices/slices.defs';
 import { setError, setLoading, setTotalVotes } from './store/slices/app.slice';
+import { Loader } from '@components/loader';
 
 export const App = () => {
     const dispatch = useDispatch();
@@ -26,11 +27,11 @@ export const App = () => {
     }, [apiLoading, error, employees]);
 
     if (appLoading) {
-        return <p>Uygulama Yükleniyor...</p>;
+        return <Loader />;
     }
 
     return (
-        <Suspense fallback={<p>Page loading...</p>}>
+        <Suspense fallback={<Loader />}>
             <Routes />
         </Suspense>
     );

@@ -10,7 +10,6 @@ import { addLog } from 'src/store/slices/logs.slice';
 
 const EmployeePage = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const { id } = useParams();
 
     useLayoutEffect(() => {
