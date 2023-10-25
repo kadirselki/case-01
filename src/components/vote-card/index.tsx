@@ -32,7 +32,7 @@ export const VoteCard = ({ data }: IVoteCardProps) => {
     return (
         <Link
             className="vote-card"
-            to={`/employee/01`}
+            to={`/employee/${id}`}
             ref={linkRef}
             onClick={(e) => avoidLinkOnClick(e, linkRef, 'vote-button')}
         >

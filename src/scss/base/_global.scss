@@ -13,12 +13,22 @@
     -webkit-text-size-adjust: 100%;
     touch-action: manipulation !important;
     padding: 2rem;
+
+    @include responsive(mobile) {
+        padding: 1rem;
+    }
 }
 
 #root {
     background: #fff7e5;
     height: 100%;
     border-radius: 2rem;
+
+    @include responsive(mobile) {
+        height: auto;
+        min-height: 100%;
+        border-radius: 1rem;
+    }
 }
 
 html,

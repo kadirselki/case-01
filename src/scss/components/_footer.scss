@@ -10,4 +10,8 @@
     justify-content: center;
     background: #feeecb;
     border-radius: 0.6rem;
+
+    @include responsive(mobile) {
+        margin: 1rem auto;
+    }
 }

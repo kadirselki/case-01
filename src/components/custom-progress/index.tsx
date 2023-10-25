@@ -1,7 +1,7 @@
 import { ICustomProgressProps } from './custom-progress.defs';
 
-export const CustomProgress = ({ value, max, min = 0 }: ICustomProgressProps) => {
-    const progress = ((value - min) / (max - min)) * 100;
+export const CustomProgress = ({ value, max }: ICustomProgressProps) => {
+    const progress = (value / max) * 100;
     const style = {
         width: `${progress}%`,
     };

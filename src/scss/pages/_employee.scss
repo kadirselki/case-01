@@ -1,4 +1,22 @@
 .employee-detail {
+    margin: -4rem 0 -4rem 0;
+
+    .prev-page-btn {
+        font-size: 2.4rem;
+        margin: 2rem 0 2rem 0.3rem;
+        display: inline-flex;
+        align-items: center;
+        grid-gap: 1rem;
+        transition: all 0.3s ease;
+        &:hover {
+            transform: translateX(-0.3rem);
+        }
+
+        @include responsive(mobile) {
+            margin-top: 4rem;
+        }
+    }
+
     .employee-header {
         .employee-name {
             font-size: 3.8rem;
@@ -7,12 +25,22 @@
             font-size: 2.2rem;
             font-weight: 300;
         }
+
+        @include responsive(mobile) {
+            text-align: center;
+        }
     }
 
     .employee-content {
         display: flex;
         margin-top: 2rem;
         grid-gap: 2rem;
+        align-items: flex-start;
+
+        @include responsive(mobile) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .employee-image {
             background: #fff;
@@ -21,10 +49,21 @@
             display: flex;
             border: 0.2rem solid #cac6c6;
             box-shadow: 0.2rem 0.1rem 0 0.1rem #ffd973;
+            z-index: 2;
+            aspect-ratio: 1/1;
+            background: #f1f1f1;
 
             img {
                 max-width: 30rem;
                 border-radius: 1.4rem;
+
+                @include responsive(tablet) {
+                    max-width: 25rem;
+                }
+
+                @include responsive(mobile) {
+                    max-width: 20rem;
+                }
             }
         }
 
@@ -34,7 +73,26 @@
             padding: 3rem;
             border-radius: 2rem;
             display: flex;
+            justify-content: space-between;
             align-items: flex-start;
+            grid-gap: 4rem;
+            flex-wrap: wrap;
+            max-width: 100%;
+
+            @include responsive(mobile) {
+                margin-top: -6rem;
+                padding-top: 8rem;
+            }
+
+            .bio {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                max-width: 60rem;
+
+                @include responsive(mobile) {
+                    font-size: 1.8rem;
+                }
+            }
 
             .employee-information-list {
                 display: grid;
@@ -44,15 +102,26 @@
                 a {
                     display: flex;
                     grid-gap: 1rem;
+                    flex-wrap: wrap;
+                    word-break: break-all;
                     .employee-information-list-title {
                         font-size: 2rem;
                         font-weight: 500;
                         flex: 0 0 auto;
+
+                        @include responsive(mobile) {
+                            font-size: 1.8rem;
+                        }
                     }
 
                     .employee-information-list-content {
                         font-size: 2.2rem;
                         font-weight: 300;
+                        text-wrap: wrap;
+
+                        @include responsive(mobile) {
+                            font-size: 1.8rem;
+                        }
                     }
                 }
             }
@@ -68,6 +137,7 @@
                 justify-content: center;
                 flex-direction: column;
                 border-radius: 2rem;
+                flex: 0 0 auto;
 
                 .vote-stat-perctange {
                     line-height: 1.3;

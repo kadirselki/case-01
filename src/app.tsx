@@ -17,7 +17,7 @@ export const App = () => {
             dispatch(setError(true));
         }
 
-        if (employees) {
+        if (employees && !apiLoading) {
             dispatch(setLoading(false));
             dispatch(setEmployees(employees as IEmployee[]));
             const totalVotes = employees.reduce((total: number, emp: IEmployee) => total + (emp.votes || 0), 0);

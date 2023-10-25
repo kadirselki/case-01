@@ -7,12 +7,18 @@
     background: #fff;
     box-shadow: 0.1rem 0.1rem 0 0.1rem #ffd973;
     position: relative;
+    border: 0.1rem solid transparent;
+
+    &:hover {
+        border-color: #000;
+    }
 
     @include responsive(mobile) {
         width: 100%;
         display: grid;
         grid-template-columns: auto;
         margin-top: 9rem;
+        grid-gap: 1rem;
 
         > * {
             width: 100%;
@@ -26,13 +32,15 @@
         overflow: hidden;
         flex: 0 0 auto;
         border: 0.2rem solid #f1f1f1;
+        aspect-ratio: 1/1;
+        background: #f1f1f1;
 
         @include responsive(mobile) {
             width: 13rem;
             height: 13rem;
             position: absolute;
-            bottom: 50%;
-            transform: translate(-50%, -50%);
+            top: -7.5rem;
+            transform: translateX(-50%);
             z-index: 3;
             left: 50%;
             box-shadow: 0.1rem 0.1rem 0 0.1rem #ffd973;
@@ -48,15 +56,24 @@
         flex: 1 1 auto;
 
         @include responsive(mobile) {
-            padding-top: 3rem;
+            padding-top: 4rem;
+            max-height: inherit;
+
+            .progress-wrapper {
+                margin-top: 1rem;
+            }
         }
 
         &-header {
             display: flex;
-            grid-gap: 6rem;
+            max-width: calc(100% - 8.6rem);
 
             .employee-name {
                 font-size: 2.4rem;
+            }
+
+            .employee-name,
+            .employee-title {
                 text-overflow: ellipsis;
                 display: -webkit-box;
                 -webkit-line-clamp: 1;

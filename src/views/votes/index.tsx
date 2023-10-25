@@ -21,7 +21,7 @@ const VotesPage = () => {
         <Layout>
             <div className="vote-page">
                 {sortedEmployees ? (
-                    <Flipper flipKey={sortedEmployees.map((e) => e.id).join('')} className="vote-list">
+                    <Flipper flipKey={sortedEmployees.map((e) => e.id).join('')} className="vote-list smooth-overflow">
                         {sortedEmployees.map((employee) => (
                             <Flipped key={employee.id} flipId={employee.id}>
                                 <div>
