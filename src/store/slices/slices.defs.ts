@@ -1,9 +1,10 @@
 export interface IAppState {
     appLoading: boolean;
+    appError: boolean;
 }
 
 export interface IEmployeeState {
-    employees: IEmployee[] | null;
+    list: IEmployee[] | null;
 }
 
 export interface IEmployee {

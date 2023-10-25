@@ -15,6 +15,11 @@ export const Routes = () => {
             element: <EmployeePage />,
             errorElement: <ErrorPage />,
         },
+        {
+            path: '/error',
+            element: <ErrorPage />,
+            errorElement: <p>APP ERROR!</p>,
+        },
     ]);
     return <RouterProvider router={router} />;
 };

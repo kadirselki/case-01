@@ -4,16 +4,21 @@ import { IAppState } from './slices.defs';
 
 export const initialState: IAppState = {
     appLoading: true,
+    appError: false,
 };
 
 export const appSlice = createSlice({
     name: 'app',
     initialState,
     reducers: {
-        setAppLoading: (state, { payload }: PayloadAction<boolean>) => {
+        setLoading: (state, { payload }: PayloadAction<boolean>) => {
             state.appLoading = payload;
+        },
+        setError: (state, { payload }: PayloadAction<boolean>) => {
+            state.appLoading = false;
+            state.appError = payload;
         },
     },
 });
 
-export const { setAppLoading } = appSlice.actions;
+export const { setLoading, setError } = appSlice.actions;
